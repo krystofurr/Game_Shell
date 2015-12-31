@@ -21,7 +21,7 @@ class Menu:
         # Rectangle objects for each menu option
         self.rectOptions = None
         # Font object for displaying text inside menus
-        self.font = pygame.font.Font(None, GameConfig.FONT_SIZE)
+        self.font = pygame.font.Font(None, GameConfig.FONT_SIZE_MENU)
 
     @abstractmethod
     def draw(self, screen):

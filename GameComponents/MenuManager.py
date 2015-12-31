@@ -53,13 +53,14 @@ class MenuManager:
         REF: http://pygame.org/wiki/TextWrap
     '''
     @staticmethod
-    def drawText(screen, text, color, rect, font, aa=False, bkg=None):
+    def drawText(screen, text, color, rect, font, aa=False, bkg=None, center=False):
         rect = pygame.Rect(rect)
         y = rect.top
         lineSpacing = -2
 
         # get the height of the font
-        fontHeight = font.size("Tg")[1]
+        fontHeight = font.size(text)[1]
+        fontWidth = font.size(text)[0]
 
         while text:
             i = 1
@@ -83,7 +84,12 @@ class MenuManager:
             else:
                 image = font.render(text[:i], aa, color)
 
-            screen.blit(image, (rect.left, y))
+            # If 'center' is enabled, center the text
+            if center:
+                screen.blit(image, (rect.centerx - fontWidth/2, y))
+            else:
+                screen.blit(image, (rect.left, y))
+
             y += fontHeight + lineSpacing
 
             # remove the text we just blitted

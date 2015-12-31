@@ -25,13 +25,15 @@ class GameConfig:
     YELLOW = (255, 255, 0)
 
     # Text properties
-    FONT_SIZE = 20
+    FONT_SIZE_MENU = 25
+    FONT_SIZE_TITLE = 35
 
     # Screen properties
     FPS = 60
     GAME_TITLE = "My Game Title"
     SCREEN_WIDTH = 640
     SCREEN_HEIGHT = 480
+    SCREEN_CENTER = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     SCREEN_CONFIG = 0
     SCREEN_COLOR_DEPTH = 32
     SCREEN_CLEAR_COLOR = BLACK

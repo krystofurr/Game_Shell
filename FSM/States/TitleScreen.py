@@ -31,10 +31,10 @@ class TitleScreen(State):
         print "[ Exiting ] TitleScreen"
 
     def draw(self, screen):
-        fontObj = pygame.font.Font('freesansbold.ttf', 22)
+        fontObj = pygame.font.Font(None, GameConfig.FONT_SIZE_TITLE)
         textSurfaceObj = fontObj.render('TitleScreen State ( Press 1 for InGame )', True, GameConfig.WHITE)
         textRectObj = textSurfaceObj.get_rect()
-        textRectObj.center = (250, 150)
+        textRectObj.center = (GameConfig.SCREEN_WIDTH / 2, 150)
         screen.blit(textSurfaceObj, textRectObj)
 
     def update(self, event):

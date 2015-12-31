@@ -17,8 +17,7 @@ class TitleMenu(Menu):
         self.menuArgs['selectColor'] = 100
         self.menuArgs['thickness'] = 3
         self.menuArgs['xPos'] = GameConfig.SCREEN_WIDTH / 2 - self.menuArgs['containerWidth'] / 2
-        self.menuArgs['yPos'] = GameConfig.SCREEN_HEIGHT / 2 - (self.menuArgs['optionHeight'] *
-                                                                self.menuArgs['numberOfOptions']) / 2
+        self.menuArgs['yPos'] = 350
 
         # Initialize the menu upon creation
         self.initializeMenu()
@@ -59,4 +58,4 @@ class TitleMenu(Menu):
 
         # Draw the text inside the menu
         for i in range(self.menuArgs['numberOfOptions']):
-            MenuManager.drawText(screen, self.options[i], GameConfig.WHITE, self.rectOptions[i], self.font)
+            MenuManager.drawText(screen, self.options[i], GameConfig.WHITE, self.rectOptions[i], self.font, center=True)
