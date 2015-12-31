@@ -27,9 +27,12 @@ class MenuManager:
                          'optionHeight': None, 'numberOfOptions': None,
                          'mainColor': None, 'selectColor': None, 'thickness': None}
 
-        options ( Tuple )
+        options ( List ) * Will get converted into a Tuple
 
-        screen
+        rectContainer ( Rectangle object for main container )
+        rectOptions ( Rectangle objects in a list used for the options )
+
+        screen ( Surface )
     '''
     @staticmethod
     def createMenu(menuArgs, options, rectContainer, rectOptions, screen):
