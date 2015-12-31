@@ -14,6 +14,8 @@ Date: December 27, 2015
 from Core.GameConfig import GameConfig
 import pygame
 
+from GameComponents.MenuManager import MenuManager
+
 
 class DisplayManager(object):
 
@@ -30,5 +32,8 @@ class DisplayManager(object):
         self.screen.fill(GameConfig.SCREEN_CLEAR_COLOR)
         # Draw the current state
         self.stateMachine.curState.draw(self.screen)
+
+        MenuManager.draw(self.screen)
+
         # Update the display
         pygame.display.update()

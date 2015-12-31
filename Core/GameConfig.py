@@ -24,6 +24,9 @@ class GameConfig:
     BLACK = (0, 0, 0)
     YELLOW = (255, 255, 0)
 
+    # Text properties
+    FONT_SIZE = 20
+
     # Screen properties
     FPS = 60
     GAME_TITLE = "My Game Title"
